@@ -1,0 +1,75 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fused Techie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <!-- Header with dark mode toggle button -->
+    <header>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Introduction section -->
+    <section id="introduction">
+        <h1>Kennedy Ekanem</h1>
+        <p>Welcome to the rabbit hole</p>
+        <div class="scroll-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 13l-7 7-7-7m14-8l-7 7-7-7"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Main content section -->
+    <section id="main-content">
+        <div class="profile-picture">
+            <img src="/static/images/noise-texture.png" alt="Profile picture">
+        </div>
+        <ul>
+            <li>Projects
+                <ul>
+                    <li>The Python Bootcamp</li>
+                    <li>PPai Book Launch</li>
+                </ul>
+            </li>
+            <li>Talks</li>
+            <li>Technical Writing</li>
+            <li>Google Drive</a></li>
+        </ul>
+    </section>
+
+ <!-- Let's Connect section -->
+<section id="lets-connect">
+    <h2>Let's Connect</h2>
+    <ul>
+        <li><a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+        </a></li>
+        <li><a href="https://wa.me" target="_blank" aria-label="WhatsApp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 6l72 72m72-72l-72 72"></path>
+            </svg>
+        </a></li>
+        <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7H8v-7a2 2 0 00-2-2 2 2 0 00-2 2v7H4v-7a6 6 0 016-6h6z"></path>
+            </svg>
+        </a></li>
+    </ul>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>hello@fusedtechie.me © Kennedy Ekanem. All rights reserved.</p>
+</footer>
