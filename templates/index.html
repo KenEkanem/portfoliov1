@@ -1,75 +1,93 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fused Techie</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="/static/script.js" defer></script>
+    <title>Kennedy Ekanem</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <!-- Header with dark mode toggle button -->
+
+    <!-- Header with custom text -->
     <header>
-        <button id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-        </button>
+        <div class="header-content">
+            <!-- Left-side text -->
+            <div class="header-left">
+                UNΛSHMD
+            </div>
+        </div>
     </header>
 
-    <!-- Introduction section -->
-    <section id="introduction">
-        <h1>Kennedy Ekanem</h1>
-        <p>Welcome to the rabbit hole</p>
-        <div class="scroll-arrow">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M19 13l-7 7-7-7m14-8l-7 7-7-7"></path>
-            </svg>
+    <!-- Landing Page -->
+    <section class="landing-page">
+        <div class="landing-content">
+            <h1>DevOps | Developer Advocate | Open Source Evangelist</h1>
+            <h2>Kennedy Ekanem</h2>
+            <p>Like all of us, this page is a work in progress 🛠️</p>
+            <!-- <p>matt</p> -->
+            <div class="scroll-arrow">
+                <img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Scroll Down">
+            </div>            
         </div>
     </section>
 
-    <!-- Main content section -->
-    <section id="main-content">
-        <div class="profile-picture">
-            <img src="/static/images/noise-texture.png" alt="Profile picture">
-        </div>
-        <ul>
-            <li>Projects
-                <ul>
-                    <li>The Python Bootcamp</li>
-                    <li>PPai Book Launch</li>
-                </ul>
-            </li>
-            <li>Talks</li>
-            <li>Technical Writing</li>
-            <li>Google Drive</a></li>
-        </ul>
-    </section>
+<!-- Main Content -->
+<section class="main-content" id="main-content">
+    <!-- First div -->
+    <div class="content-first">
+        <p>Planting projects seeds<span class="emoji-superscript">🌱</span></p>
+        <!-- Animated Dots -->
+        <section class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </section>
+    </div>
 
- <!-- Let's Connect section -->
-<section id="lets-connect">
+
+    <!-- Second div -->
+    <div class="content-second">
+        <p>For some of us, we are destined to give, to radiate his love without expectation. 
+            Our Joy is not derived from human approval or anything natural; A burden, carried throughout life
+        But then, there are many</p>
+    </div>
+</section>
+ 
+
+<!-- Let's Connect Section -->
+<section class="lets-connect">
     <h2>Let's Connect</h2>
-    <ul>
-        <li><a href="https://twitter.com" target="_blank" aria-label="Twitter">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
-        </a></li>
-        <li><a href="https://wa.me" target="_blank" aria-label="WhatsApp">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 6l72 72m72-72l-72 72"></path>
-            </svg>
-        </a></li>
-        <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7H8v-7a2 2 0 00-2-2 2 2 0 00-2 2v7H4v-7a6 6 0 016-6h6z"></path>
-            </svg>
-        </a></li>
-    </ul>
+    <div class="social-icons">
+        <a href="https://twitter.com/FusedTechie" target="_blank">
+            <img src="{{ url_for('static', filename='images/twitter.png') }}" alt="Twitter">
+        </a>
+        <a href="https://github.com/KenEkanem" target="_blank">
+            <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/fusedtechie/" target="_blank">
+            <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn">
+        </a>
+        <a href="#" target="_blank">
+            <img src="{{ url_for('static', filename='images/deezer.png') }}" alt="Deezer">
+        </a>
+        <a href="https://slides.com/fusedtechie" target="_blank">
+            <img src="{{ url_for('static', filename='images/microphone.png') }}" alt="Microphone">
+        </a>
+        <a href="https://drive.google.com/drive/folders/1KeNSCfxOuqbqcxfEOyFcuZXXDJRllZKE?usp=sharing" target="_blank">
+            <img src="{{ url_for('static', filename='images/google-drive.png') }}" alt="Google Drive">
+        </a>
+        <a href="https://fusedtechie.hashnode.dev/" target="_blank">
+            <img src="{{ url_for('static', filename='images/hashnode.png') }}" alt="Hashnode">
+        </a>
+    </div>
 </section>
 
-<!-- Footer -->
-<footer>
-    <p>hello@fusedtechie.me © Kennedy Ekanem. All rights reserved.</p>
-</footer>
+
+    <!-- Footer -->
+    <footer>
+        <p>hello@fusedtechie.me © Kennedy Ekanem. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

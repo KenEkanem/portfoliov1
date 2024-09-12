@@ -1,0 +1,394 @@
+/* Import DeliusUnicase-Bold font */
+@font-face {
+    font-family: 'DeliusUnicaseBold';
+    src: url('/static/css/font/DeliusUnicase-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Import Aclonica font */
+@font-face {
+    font-family: 'Aclonica';
+    src: url('/static/css/font/Aclonica-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Import PatrickHand-Regular font */
+@font-face {
+    font-family: 'PatrickHand';
+    src: url('/static/css/font/PatrickHand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;  /* Dark background */
+    color: #fff;             /* White text */
+}
+
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-left, .header-right {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;  /* White text */
+}
+
+.rotate-V {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+/* Landing Page */
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    background-color: #000;  /* Dark background */
+    color: #fff;             /* White text */
+}
+
+.landing-content h1 {
+    font-family: 'Aclonica', sans-serif; /* Use the Aclonica font for the h1 */
+    font-size: 2rem;                     /* Adjust font size if necessary */
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;  /* White text */
+    animation: slide-in 1.5s ease;       /* Slide-in animation */
+}
+
+.landing-content h2 {
+    font-family: 'DeliusUnicaseBold', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    color: #fff;  /* White text */
+}
+
+.landing-content p {
+    font-size: 1.2rem;
+    color: #fff;  /* White text */
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    animation: bounce 2s infinite;  /* Bounce animation */
+    cursor: pointer;
+}
+
+.scroll-arrow img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Main Content Styling */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: space-between; /* Space out elements */
+    align-items: center;  /* Center the content horizontally */
+    height: 100vh;  /* Set the height to the full viewport height */
+    background-color: #2b2b2b;  /* Dark background */
+    color: white;  /* White text */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+/* First content div - centered */
+.content-first {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    width: 100%;  /* Ensure it takes up the full width */
+    flex-grow: 1; /* Allow it to grow and occupy space in the section */
+}
+
+.content-first p {
+    font-size: 1.5rem;
+    text-align: justify;  /* Justify text */
+    max-width: 800px; /* Limit the width of the text */
+}
+
+/* Add keyframe animation for the first div */
+@keyframes fade-slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start with slight downward offset */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Animate the first content div */
+.content-first {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    width: 100%;  /* Full width */
+    flex-grow: 1; /* Grow to fill available space */
+    opacity: 0; /* Start invisible */
+    animation: fade-slide-up 2s ease forwards; /* Trigger animation */
+    animation-delay: 0.5s; /* Optional: Add a delay before animation starts */
+}
+
+.content-first p {
+    font-size: 1.5rem;
+    text-align: justify;  /* Justify text */
+    max-width: 800px; /* Limit the width of the text */
+    color: #fff; /* White text */
+}
+
+
+/* Style for the superscript emoji */
+.emoji-superscript {
+    font-size: 0.8em; /* Smaller size for superscript */
+    vertical-align: super; /* Align text to the top, superscript style */
+    margin-left: 0.4em; /* Space between text and emoji */
+    margin-bottom: 0.2em; /* Space below emoji */
+}
+
+
+/* Container for the dots */
+.loading-dots {
+    display: flex;
+    justify-content: center; /* Center the dots horizontally */
+    align-items: center; /* Center the dots vertically */
+    margin-top: 10px; /* Space between text and dots */
+}
+
+/* Style for each dot */
+.dot {
+    width: 7px; /* Size of the dot */
+    height: 7px; /* Size of the dot */
+    background-color: #fff; /* Color of the dot */
+    border-radius: 50%; /* Make the dot round */
+    margin: 0 5px; /* Space between dots */
+    animation: bounce 1.5s infinite; /* Apply bounce animation */
+}
+
+/* Animation for the dots */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at original position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up */
+    }
+}
+
+/* Delay animation for each dot to create a sequential effect */
+.dot:nth-child(2) {
+    animation-delay: 0.3s; /* Delay for the second dot */
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.6s; /* Delay for the third dot */
+}
+
+/* Second content div - moved to the end and reduced in size */
+.content-second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;  /* Reduce the width to 60% of the original size */
+    flex-shrink: 1; /* Prevent it from taking too much space */
+    margin-top: auto; /* Push the second div to the bottom of the section */
+    margin-bottom: 20px; /* Add some space at the bottom */
+    font-family: 'PatrickHand', sans-serif; /* Apply the Patrick Hand font */
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+.content-second p {
+    font-size: 1rem;
+    text-align: justify;  /* Justify text */
+    color: #fff;
+    padding: 0 10px; /* Add padding to improve readability */
+}
+
+
+/* Let's Connect Section */
+.lets-connect {
+    text-align: center;
+    padding: 50px 0;
+    color: #fff;  /* White text */
+}
+
+.social-icons a {
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;  /* Standard icon container width */
+    height: 40px;  /* Standard icon container height */
+}
+
+.social-icons img {
+    width: 100%;   /* Icon scales to container size */
+    height: 100%;
+    object-fit: contain; /* Aspect ratio intact without distortion */
+    transition: transform 0.3s ease;  /* Smooth hover effect */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);  /* Zoom effect on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    background-color: #000;  /* Dark background */
+    color: #fff;             /* White text */
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px); /* Move up */
+    }
+    60% {
+        transform: translateY(-5px);  /* Move down slightly */
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+
+/* Adjustments for screens smaller than 768px (Tablet and Mobile view) */
+@media (max-width: 768px) {
+    /* Header */
+    .header-left {
+        font-size: 0.8rem;  /* Reduce the font size */
+    }
+
+    /* Landing Page */
+    .landing-content h1 {
+        font-size: 1.5rem;  /* Reduce the font size */
+    }
+
+    .landing-content h2 {
+        font-size: 3rem;  /* Scale down the name */
+    }
+
+    .landing-content p {
+        font-size: 1rem;  /* Reduce paragraph size */
+    }
+
+    /* Scroll Arrow */
+    .scroll-arrow img {
+        width: 30px;  /* Reduce arrow size */
+        height: 30px;
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 20px;  /* Add padding for better spacing */
+    }
+
+    /* Let's Connect Section */
+    .social-icons a {
+        margin: 0 10px;  /* Decrease margin for icons */
+    }
+
+    .social-icons img {
+        width: 30px;  /* Reduce icon size */
+        height: 30px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.7rem;  /* Reduce font size */
+        padding: 10px 0;  /* Adjust padding for better spacing */
+    }
+}
+
+/* Adjustments for screens smaller than 480px (Small mobile view) */
+@media (max-width: 480px) {
+    /* Landing Page */
+    .landing-content h1 {
+        font-size: 1.2rem;  /* Further reduce font size */
+    }
+
+    .landing-content h2 {
+        font-size: 2.5rem;  /* Further scale down the name */
+    }
+
+    .landing-content p {
+        font-size: 0.9rem;  /* Further reduce paragraph size */
+    }
+
+    /* Scroll Arrow */
+    .scroll-arrow img {
+        width: 25px;  /* Further reduce arrow size */
+        height: 25px;
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 15px;  /* Adjust padding */
+    }
+
+    /* Let's Connect Section */
+    .social-icons a {
+        margin: 0 5px;  /* Further decrease margin for icons */
+    }
+
+    .social-icons img {
+        width: 25px;  /* Further reduce icon size */
+        height: 25px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.6rem;  /* Further reduce font size */
+        padding: 8px 0;  /* Adjust padding */
+    }
+}
