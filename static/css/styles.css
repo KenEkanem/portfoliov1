@@ -27,8 +27,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #000;  /* Dark background */
-    color: #fff;             /* White text */
+    background-color: #000;   
+    color: #fff;             
 }
 
 
@@ -56,7 +56,7 @@ header {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #fff;  /* White text */
+    color: #fff;  
 }
 
 .rotate-V {
@@ -72,16 +72,15 @@ header {
     height: 100vh;
     text-align: center;
     position: relative;
-    background-color: #000;  /* Dark background */
-    color: #fff;             /* White text */
+    background-color: #000;  
+    color: #fff;             
 }
 
 .landing-content h1 {
-    font-family: 'Aclonica', sans-serif; /* Use the Aclonica font for the h1 */
-    font-size: 2rem;                     /* Adjust font size if necessary */
-    font-weight: 400;
+    font-family: 'Aclonica', sans-serif; 
+    font-size: 18px;                    
     text-transform: uppercase;
-    color: #fff;  /* White text */
+    color: #fff;  
     animation: slide-in 1.5s ease;       /* Slide-in animation */
 }
 
@@ -91,12 +90,12 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     margin: 0.5rem 0;
-    color: #fff;  /* White text */
+    color: #fff;   
 }
 
 .landing-content p {
     font-size: 1.2rem;
-    color: #fff;  /* White text */
+    color: #fff;   
 }
 
 /* Scroll Arrow */
@@ -117,59 +116,57 @@ header {
 /* Main Content Styling */
 .main-content {
     display: flex;
-    flex-direction: column; /* Stack the elements vertically */
-    justify-content: space-between; /* Space out elements */
-    align-items: center;  /* Center the content horizontally */
-    height: 100vh;  /* Set the height to the full viewport height */
-    background-color: #2b2b2b;  /* Dark background */
-    color: white;  /* White text */
-    padding: 20px; /* Add padding for better spacing */
-}
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;  
+    height: 100vh;  
+    background-color: #2b2b2b;   
+    color: white;   
+    padding: 20px; 
 
 /* First content div - centered */
 .content-first {
     display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    width: 100%;  /* Ensure it takes up the full width */
-    flex-grow: 1; /* Allow it to grow and occupy space in the section */
+    justify-content: center;  
+    align-items: center;  
+    width: 100%;  
+    flex-grow: 1; 
 }
 
 .content-first p {
     font-size: 1.5rem;
-    text-align: justify;  /* Justify text */
-    max-width: 800px; /* Limit the width of the text */
+    text-align: justify;  
+    max-width: 800px; 
 }
 
 /* Add keyframe animation for the first div */
 @keyframes fade-slide-up {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* Start with slight downward offset */
+        transform: translateY(20px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* End at original position */
+        transform: translateY(0); 
     }
 }
 
 /* Animate the first content div */
 .content-first {
     display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    width: 100%;  /* Full width */
-    flex-grow: 1; /* Grow to fill available space */
+    justify-content: center;  
+    align-items: center;  
+    width: 100%; 
+    flex-grow: 1; 
     opacity: 0; /* Start invisible */
     animation: fade-slide-up 2s ease forwards; /* Trigger animation */
-    animation-delay: 0.5s; /* Optional: Add a delay before animation starts */
-}
+    animation-delay: 0.5s;
 
 .content-first p {
     font-size: 1.5rem;
     text-align: justify;  /* Justify text */
     max-width: 800px; /* Limit the width of the text */
-    color: #fff; /* White text */
+    color: #fff;  
 }
 
 
@@ -245,7 +242,7 @@ header {
 .lets-connect {
     text-align: center;
     padding: 50px 0;
-    color: #fff;  /* White text */
+    color: #fff;   
 }
 
 .social-icons a {
@@ -272,8 +269,8 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
-    background-color: #000;  /* Dark background */
-    color: #fff;             /* White text */
+    background-color: #000;   
+    color: #fff;              
 }
 
 /* Animations */
