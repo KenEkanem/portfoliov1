@@ -32,11 +32,46 @@
         </div>
     </section>
 
+
+
+
+
+
+
+
+
+
 <!-- Main Content -->
 <section class="main-content" id="main-content">
-    <!-- First div -->
+        <!-- Project Views Section -->
+    <div class="project-views">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='images/project1.png') }}" alt="Project 1 Image">
+                </div>
+                <div class="project-description">
+                    <h3>Modular System</h3>
+                    <p>desc.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='images/project2.png') }}" alt="Project 2 Image">
+                </div>
+                <div class="project-description">
+                    <h3>Landest</h3>
+                    <p>desc</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+            <!-- First div -->
     <div class="content-first">
-        <p>Planting projects seeds<span class="emoji-superscript">🌱</span></p>
+        <p>Planting more projects seeds<span class="emoji-superscript">🌱</span></p>
         <!-- Animated Dots -->
         <section class="loading-dots">
             <div class="dot"></div>
@@ -44,6 +79,9 @@
             <div class="dot"></div>
         </section>
     </div>
+
+
+
 
 
     <!-- Second div -->
