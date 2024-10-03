@@ -5,9 +5,9 @@ set -e
 
 # Step 2: Set up Python
 echo "Setting up Python..."
-PYTHON_VERSION=3.9  # Specify the exact version of Python
-sudo apt-get update
-sudo apt-get install -y python$PYTHON_VERSION python3-pip
+PYTHON_VERSION=3.11.9
+apt-get update
+apt-get install -y python$PYTHON_VERSION python3-pip
 
 # Step 3: Install Python dependencies
 echo "Installing Python dependencies..."
@@ -17,8 +17,8 @@ pip3 install -r requirements.txt
 # Step 4: Set up Node.js
 echo "Setting up Node.js..."
 NODE_VERSION=16.x
-curl -sL https://deb.nodesource.com/setup_$NODE_VERSION | sudo -E bash -
-sudo apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_$NODE_VERSION | bash -
+apt-get install -y nodejs
 
 # Step 5: Install PM2
 echo "Installing PM2..."
