@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'PatrickHand';
-    src: url('/static/css/font/PatrickHand-Regular.ttf') format('truetype');
+    src: url('/static/css/font/DMMono-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -203,19 +203,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Full width on smaller screens */
-    margin: 20px 0;
+    width: 100%; 
+    margin: 30px 0;
     font-family: 'PatrickHand', sans-serif;
-    font-size: 1rem;
+    font-size: 5rem;
     line-height: 1.6;
     padding: 0 10px; /* Add padding to prevent text from touching the edges */
 }
 
 .content-second p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: justify;
     color: #fff;
-    padding: 0 10px;
+    padding:0 5px;
 }
 
 /* Let's Connect Section */
@@ -311,30 +311,30 @@ footer {
     }
 
     .main-content {
-        padding: 15px; /* Reduce padding on smaller screens */
+        padding: 15px;
     }
     .project-list {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .project-item {
-        padding: 10px; /* Reduce padding on smaller screens */
+        padding: 10px; 
     }
 
     .project-description h3 {
-        font-size: 1.2rem; /* Reduce font size for headings */
+        font-size: 1.2rem; 
     }
 
     .project-description p {
-        font-size: 0.9rem; /* Reduce font size for paragraphs */
+        font-size: 0.9rem; 
     }
 
     .content-first p {
-        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        font-size: 0.9rem; 
     }
 
     .content-second p {
-        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        font-size: 0.7rem; 
     }
 }
     .social-icons a {
