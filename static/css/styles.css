@@ -1,4 +1,4 @@
-/* Import DeliusUnicase-Bold font */
+/* Import Fonts */
 @font-face {
     font-family: 'DeliusUnicaseBold';
     src: url('/static/css/font/DeliusUnicase-Bold.ttf') format('truetype');
@@ -6,7 +6,6 @@
     font-style: normal;
 }
 
-/* Import Aclonica font */
 @font-face {
     font-family: 'Aclonica';
     src: url('/static/css/font/Aclonica-Regular.ttf') format('truetype');
@@ -14,7 +13,6 @@
     font-style: normal;
 }
 
-/* Import PatrickHand-Regular font */
 @font-face {
     font-family: 'PatrickHand';
     src: url('/static/css/font/PatrickHand-Regular.ttf') format('truetype');
@@ -27,11 +25,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #000;   
-    color: #fff;             
+    background-color: #000;
+    color: #fff;
 }
-
-
 
 /* Header */
 header {
@@ -56,7 +52,7 @@ header {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #fff;  
+    color: #fff;
 }
 
 .rotate-V {
@@ -72,30 +68,30 @@ header {
     height: 100vh;
     text-align: center;
     position: relative;
-    background-color: #000;  
-    color: #fff;             
+    background-color: #000;
+    color: #fff;
 }
 
 .landing-content h1 {
-    font-family: 'Aclonica', sans-serif; 
-    font-size: 18px;                    
+    font-family: 'Aclonica', sans-serif;
+    font-size: 15px;
     text-transform: uppercase;
-    color: #fff;  
-    animation: slide-in 1.5s ease;       /* Slide-in animation */
+    color: #fff;
+    animation: slide-in 1.5s ease;
 }
 
 .landing-content h2 {
     font-family: 'DeliusUnicaseBold', sans-serif;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0.5rem 0;
-    color: #fff;   
+    color: #fff;
 }
 
 .landing-content p {
     font-size: 1.2rem;
-    color: #fff;   
+    color: #fff;
 }
 
 /* Scroll Arrow */
@@ -104,7 +100,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    animation: bounce 2s infinite;  /* Bounce animation */
+    animation: bounce 2s infinite;
     cursor: pointer;
 }
 
@@ -116,197 +112,135 @@ header {
 /* Main Content Styling */
 .main-content {
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    align-items: center;  
-    height: 100vh;  
-    background-color: #2b2b2b;   
-    color: white;   
-    padding: 20px; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to ensure it covers the viewport */
+    background-color: #2b2b2b;
+    color: white;
+    padding: 100px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-/* First content div - centered */
 .content-first {
     display: flex;
-    justify-content: center;  
-    align-items: center;  
-    width: 100%;  
-    flex-grow: 1; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    opacity: 0;
+    animation: fade-slide-up 2s ease forwards 0.5s;
+    text-align: center; /* Center text on smaller screens */
 }
 
 .content-first p {
-    font-size: 1.5rem;
-    text-align: justify;  
-    max-width: 800px; 
+    font-size: 1rem;
+    text-align: justify;
+    max-width: 800px;
+    color: #fff;
+    padding: 0 10px; /* Add padding to prevent text from touching the edges */
 }
 
-/* Add keyframe animation for the first div */
-@keyframes fade-slide-up {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); 
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); 
-    }
-}
-
-/* Animate the first content div */
-.content-first {
-    display: flex;
-    justify-content: center;  
-    align-items: center;  
-    width: 100%; 
-    flex-grow: 1; 
-    opacity: 0; /* Start invisible */
-    animation: fade-slide-up 2s ease forwards; /* Trigger animation */
-    animation-delay: 0.5s;
-}
-
-.content-first p {
-    font-size: 1.5rem;
-    text-align: justify;  /* Justify text */
-    max-width: 800px; /* Limit the width of the text */
-    color: #fff;  
-}
-
-
-/* Style for the superscript emoji */
-.emoji-superscript {
-    font-size: 0.8em; /* Smaller size for superscript */
-    vertical-align: super; /* Align text to the top, superscript style */
-    margin-left: 0.4em; /* Space between text and emoji */
-    margin-bottom: 0.2em; /* Space below emoji */
-}
-
-
-/* Container for the dots */
-.loading-dots {
-    display: flex;
-    justify-content: center; /* Center the dots horizontally */
-    align-items: center; /* Center the dots vertically */
-    margin-top: 10px; /* Space between text and dots */
-}
-
-/* Style for each dot */
-.dot {
-    width: 7px; /* Size of the dot */
-    height: 7px; /* Size of the dot */
-    background-color: #fff; /* Color of the dot */
-    border-radius: 50%; /* Make the dot round */
-    margin: 0 5px; /* Space between dots */
-    animation: bounce 1.5s infinite; /* Apply bounce animation */
-}
-
-/* Animation for the dots */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0); /* Start and end at original position */
-    }
-    50% {
-        transform: translateY(-20px); /* Move up */
-    }
-}
-
-/* Delay animation for each dot to create a sequential effect */
-.dot:nth-child(2) {
-    animation-delay: 0.3s; /* Delay for the second dot */
-}
-
-.dot:nth-child(3) {
-    animation-delay: 0.6s; /* Delay for the third dot */
-}
-
-/* Styling for Project Views */
+/* Project Views Section */
 .project-views {
-    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%; /* Ensure it takes full width */
 }
 
 .project-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
 .project-item {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #1e1e1e;
+    width: 100%; /* Ensure it takes full width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .project-image img {
-    width: 200px;
-    height: auto;
+    width: 100%;
+    height: auto; /* Make images responsive */
+    max-height: 200px; /* Limit image height */
     object-fit: cover;
     border-radius: 8px;
 }
 
 .project-description {
-    flex-grow: 1;
-    text-align: justify;
+    text-align: left;
+    width: 100%;
+    font-family: 'PatrickHand', sans-serif;
 }
 
 .project-description h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    color: #fff;
+    font-family: 'PatrickHand', sans-serif;
 }
 
 .project-description p {
-    line-height: 1.6;
     font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+    font-family: 'PatrickHand', sans-serif;
 }
 
-
-
-/* Second content div - moved to the end and reduced in size */
 .content-second {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;  /* Reduce the width to 60% of the original size */
-    flex-shrink: 1; /* Prevent it from taking too much space */
-    margin-top: auto; /* Push the second div to the bottom of the section */
-    margin-bottom: 20px; /* Add some space at the bottom */
-    font-family: 'PatrickHand', sans-serif; /* Apply the Patrick Hand font */
-    font-size: 1rem; /* Adjust font size as needed */
-    line-height: 1.6; /* Adjust line height for readability */
+    width: 100%; /* Full width on smaller screens */
+    margin: 20px 0;
+    font-family: 'PatrickHand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 10px; /* Add padding to prevent text from touching the edges */
 }
 
 .content-second p {
     font-size: 1rem;
-    text-align: justify;  /* Justify text */
+    text-align: justify;
     color: #fff;
-    padding: 0 10px; /* Add padding to improve readability */
+    padding: 0 10px;
 }
-
 
 /* Let's Connect Section */
 .lets-connect {
     text-align: center;
     padding: 50px 0;
-    color: #fff;   
+    color: #fff;
 }
 
 .social-icons a {
     margin: 0 15px;
-    text-decoration: none;
     display: inline-block;
-    width: 40px;  /* Standard icon container width */
-    height: 40px;  /* Standard icon container height */
+    width: 40px;
+    height: 40px;
 }
 
 .social-icons img {
-    width: 100%;   /* Icon scales to container size */
+    width: 100%;
     height: 100%;
-    object-fit: contain; /* Aspect ratio intact without distortion */
-    transition: transform 0.3s ease;  /* Smooth hover effect */
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .social-icons img:hover {
-    transform: scale(1.2);  /* Zoom effect on hover */
+    transform: scale(1.2);
 }
 
 /* Footer */
@@ -314,20 +248,20 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
-    background-color: #000;   
-    color: #fff;              
+    background-color: #000;
+    color: #fff;
 }
 
-/* Animations */
+/* Keyframe Animations */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
     40% {
-        transform: translateY(-10px); /* Move up */
+        transform: translateY(-10px);
     }
     60% {
-        transform: translateY(-5px);  /* Move down slightly */
+        transform: translateY(-5px);
     }
 }
 
@@ -342,95 +276,141 @@ footer {
     }
 }
 
-/* Responsive Design */
-
-/* Adjustments for screens smaller than 768px (Tablet and Mobile view) */
-@media (max-width: 768px) {
-    /* Header */
-    .header-left {
-        font-size: 0.8rem;  /* Reduce the font size */
+@keyframes fade-slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
     }
-
-    /* Landing Page */
-    .landing-content h1 {
-        font-size: 1.5rem;  /* Reduce the font size */
-    }
-
-    .landing-content h2 {
-        font-size: 3rem;  /* Scale down the name */
-    }
-
-    .landing-content p {
-        font-size: 1rem;  /* Reduce paragraph size */
-    }
-
-    /* Scroll Arrow */
-    .scroll-arrow img {
-        width: 30px;  /* Reduce arrow size */
-        height: 30px;
-    }
-
-    /* Main Content */
-    .main-content {
-        padding: 20px;  /* Add padding for better spacing */
-    }
-
-    /* Let's Connect Section */
-    .social-icons a {
-        margin: 0 10px;  /* Decrease margin for icons */
-    }
-
-    .social-icons img {
-        width: 30px;  /* Reduce icon size */
-        height: 30px;
-    }
-
-    /* Footer */
-    footer {
-        font-size: 0.7rem;  /* Reduce font size */
-        padding: 10px 0;  /* Adjust padding for better spacing */
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Adjustments for screens smaller than 480px (Small mobile view) */
-@media (max-width: 480px) {
-    /* Landing Page */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-left {
+        font-size: 0.7rem;
+    }
+
     .landing-content h1 {
-        font-size: 1.2rem;  /* Further reduce font size */
+        font-size: 0.8rem;
     }
 
     .landing-content h2 {
-        font-size: 2.5rem;  /* Further scale down the name */
+        font-size: 2.0rem;
     }
 
     .landing-content p {
-        font-size: 0.9rem;  /* Further reduce paragraph size */
+        font-size: 0.7rem;
     }
 
-    /* Scroll Arrow */
     .scroll-arrow img {
-        width: 25px;  /* Further reduce arrow size */
-        height: 25px;
+        width: 30px;
+        height: 30px;
     }
 
-    /* Main Content */
     .main-content {
-        padding: 15px;  /* Adjust padding */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+    .project-list {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
     }
 
-    /* Let's Connect Section */
+    .project-item {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .project-description h3 {
+        font-size: 1.2rem; /* Reduce font size for headings */
+    }
+
+    .project-description p {
+        font-size: 0.9rem; /* Reduce font size for paragraphs */
+    }
+
+    .content-first p {
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+
+    .content-second p {
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+}
     .social-icons a {
-        margin: 0 5px;  /* Further decrease margin for icons */
+        margin: 0 5px;
     }
 
     .social-icons img {
-        width: 25px;  /* Further reduce icon size */
+        width: 20px;
+        height: 20px;
+    }
+
+    footer {
+        font-size: 0.7rem;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-content h1 {
+        font-size: 0.2rem;
+    }
+
+    .landing-content h2 {
+        font-size: 1.0rem;
+    }
+
+    .landing-content p {
+        font-size: 0.9rem;
+    }
+
+    .scroll-arrow img {
+        width: 25px;
         height: 25px;
     }
 
-    /* Footer */
+    .main-content {
+        padding: 10px; /* Further reduce padding on very small screens */
+    }
+
+    .project-item {
+        padding: 8px; /* Further reduce padding on very small screens */
+    }
+
+    .project-description h3 {
+        font-size: 1rem; /* Further reduce font size for headings */
+    }
+
+    .project-description p {
+        font-size: 0.8rem; /* Further reduce font size for paragraphs */
+    }
+
+    .content-first p {
+        font-size: 0.8rem; /* Further reduce font size for very small screens */
+    }
+
+    .content-second p {
+        font-size: 0.8rem; /* Further reduce font size for very small screens */
+    }
+
+    .social-icons a {
+        margin: 0 4px;
+    }
+
+    .social-icons img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     footer {
-        font-size: 0.6rem;  /* Further reduce font size */
-        padding: 8px 0;  /* Adjust padding */
+        font-size: 0.6rem;
+        padding: 8px 0;
     }
 }
