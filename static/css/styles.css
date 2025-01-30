@@ -6,16 +6,16 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Aclonica';
-    src: url('/static/css/font/Aclonica-Regular.ttf') format('truetype');
+/* @font-face {
+    font-family: 'Andika';
+    src: url('/static/css/font/Andika-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 @font-face {
-    font-family: 'PatrickHand';
-    src: url('/static/css/font/DMMono-Regular.ttf') format('truetype');
+    font-family: 'Andika';
+    src: url('/static/css/font/Andika-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -73,9 +73,9 @@ header {
 }
 
 .landing-content h1 {
-    font-family: 'Aclonica', sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
+    font-family: 'Andika', sans-serif;
+    font-size: 18px;
+    /* text-transform: uppercase; */
     color: #fff;
     animation: slide-in 1.5s ease;
 }
@@ -90,6 +90,7 @@ header {
 }
 
 .landing-content p {
+    font-family: 'Andika', sans-serif;
     font-size: 1.2rem;
     color: #fff;
 }
@@ -112,15 +113,15 @@ header {
 /* Main Content Styling */
 .main-content {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh; /* Use min-height to ensure it covers the viewport */
+    min-height: 80vh; /* Use min-height to ensure it covers the viewport */
     background-color: #2b2b2b;
     color: white;
     padding: 100px;
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden; 
 }
 
 .content-first {
@@ -142,6 +143,52 @@ header {
     padding: 0 10px; /* Add padding to prevent text from touching the edges */
 }
 
+/* Style for the superscript emoji */
+.emoji-superscript {
+    font-size: 0.8em; /* Smaller size for superscript */
+    vertical-align: super; /* Align text to the top, superscript style */
+    margin-left: 0.4em; /* Space between text and emoji */
+    margin-bottom: 0.2em; /* Space below emoji */
+}
+
+
+/* Container for the dots */
+.loading-dots {
+    display: flex;
+    justify-content: center; /* Center the dots horizontally */
+    align-items: center; /* Center the dots vertically */
+    margin-top: 10px; /* Space between text and dots */
+}
+
+/* Style for each dot */
+.dot {
+    width: 7px; /* Size of the dot */
+    height: 7px; /* Size of the dot */
+    background-color: #fff; /* Color of the dot */
+    border-radius: 50%; /* Make the dot round */
+    margin: 0 5px; /* Space between dots */
+    animation: bounce 1.5s infinite; /* Apply bounce animation */
+}
+
+/* Animation for the dots */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at original position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up */
+    }
+}
+
+/* Delay animation for each dot to create a sequential effect */
+.dot:nth-child(2) {
+    animation-delay: 0.3s; /* Delay for the second dot */
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.6s; /* Delay for the third dot */
+}
+
 /* Project Views Section */
 .project-views {
     max-width: 1200px;
@@ -159,6 +206,7 @@ header {
 }
 
 .project-item {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,36 +216,77 @@ header {
     padding: 12px;
     background-color: #1e1e1e;
     width: 100%; /* Ensure it takes full width */
+    overflow: hidden;
     box-sizing: border-box; /* Include padding in width calculation */
+}
+.project-content {
+    width: 50%;
+    height: 50%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+
+}
+.project-item.flipped .project-content {
+    transform: rotateY(180deg);
+}
+.project-front {
+    background: transparent;
+    backface-visibility: hidden;
+    justify-content: center;
+    align-items: center; /* Centers the content horizontally and vertically */
+    padding: 10px;
+    box-sizing: border-box;
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+}
+.project-back {
+    /* position: absolute; */
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start; /* Align description text to the top */
+    padding-top: 20px; /* Ensure description starts from the top */
+    box-sizing: border-box;
+    background: #e2232300;
+    transform: rotateY(180deg); /* Flip the back side */
+    color: rgb(255, 255, 255);
+}
+.project-back p {
+    font-size: 10px;
+    text-align: left;
+    /* width: 200%; */
 }
 
 .project-image img {
     width: 100%;
     height: auto; /* Make images responsive */
-    max-height: 200px; /* Limit image height */
+    max-height: 200px; /* This Limit image height */
     object-fit: cover;
     border-radius: 8px;
 }
 
-.project-description {
+/* .project-description {
     text-align: left;
     width: 100%;
-    font-family: 'PatrickHand', sans-serif;
+    font-family: 'Andika', sans-serif;
 }
 
 .project-description h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: #fff;
-    font-family: 'PatrickHand', sans-serif;
+    font-family: 'Andika', sans-serif;
 }
 
 .project-description p {
     font-size: 1rem;
     line-height: 1.6;
     color: #fff;
-    font-family: 'PatrickHand', sans-serif;
-}
+    font-family: 'Andika', sans-serif;
+} */
 
 .content-second {
     display: flex;
@@ -205,28 +294,28 @@ header {
     align-items: center;
     width: 100%; 
     margin: 30px 0;
-    font-family: 'PatrickHand', sans-serif;
-    font-size: 5rem;
+    font-family: 'Andika', sans-serif;
+    font-size: 6rem;
     line-height: 1.6;
     padding: 0 10px; /* Add padding to prevent text from touching the edges */
 }
 
 .content-second p {
-    font-size: 0.8rem;
-    text-align: justify;
+    font-size: 1.2rem;
+    text-align: left;
     color: #fff;
-    padding:0 5px;
+    padding:0 300px;
 }
 
 /* Let's Connect Section */
 .lets-connect {
     text-align: center;
-    padding: 50px 0;
+    padding: 40px 0;
     color: #fff;
 }
 
 .social-icons a {
-    margin: 0 15px;
+    margin: 0 10px;
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -240,7 +329,10 @@ header {
 }
 
 .social-icons img:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
+    /* width: 10px;
+    height: 10px; */
+
 }
 
 /* Footer */
@@ -294,7 +386,7 @@ footer {
     }
 
     .landing-content h1 {
-        font-size: 0.8rem;
+        font-size: 1.8rem;
     }
 
     .landing-content h2 {
@@ -334,7 +426,9 @@ footer {
     }
 
     .content-second p {
-        font-size: 0.7rem; 
+        font-size: 0.7rem;
+        text-align: left;
+        padding: 0 4px;
     }
 }
     .social-icons a {
@@ -350,15 +444,15 @@ footer {
         font-size: 0.7rem;
         padding: 10px 0;
     }
-}
+
 
 @media (max-width: 480px) {
     .landing-content h1 {
-        font-size: 0.2rem;
+        font-size: 0.7rem;
     }
 
     .landing-content h2 {
-        font-size: 1.0rem;
+        font-size: 2.0rem;
     }
 
     .landing-content p {
@@ -371,27 +465,27 @@ footer {
     }
 
     .main-content {
-        padding: 10px; /* Further reduce padding on very small screens */
+        padding: 10px; 
     }
 
     .project-item {
-        padding: 8px; /* Further reduce padding on very small screens */
+        padding: 8px; 
     }
 
     .project-description h3 {
-        font-size: 1rem; /* Further reduce font size for headings */
+        font-size: 1rem; 
     }
 
     .project-description p {
-        font-size: 0.8rem; /* Further reduce font size for paragraphs */
+        font-size: 0.8rem; 
     }
 
     .content-first p {
-        font-size: 0.8rem; /* Further reduce font size for very small screens */
+        font-size: 0.8rem; 
     }
 
     .content-second p {
-        font-size: 0.8rem; /* Further reduce font size for very small screens */
+        font-size: 0.6rem; 
     }
 
     .social-icons a {

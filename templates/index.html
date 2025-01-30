@@ -22,7 +22,7 @@
     <!-- Landing Page -->
     <section class="landing-page">
         <div class="landing-content">
-            <h1>DevOps | Developer Advocate | Open Source Evangelist</h1>
+            <h1>DevOps | Programs & Community | Open Source Advocate</h1>
             <h2>Kennedy Ekanem</h2>
             <p>Like all of us, this page is a work in progress 🛠️</p>
             <!-- <p>matt</p> -->
@@ -39,26 +39,55 @@
         <h2>My Projects</h2>
         <div class="project-list">
             <div class="project-item">
-                <div class="project-image">
-                    <img src="{{ url_for('static', filename='images/sortapp.png') }}" alt="Project 1 Image">
-                </div>
-                <div class="project-description">
-                    <h3>SortApp + CheckinApp</h3>
+                <div class="project-content">
+                    <div class="project-front">
+                        <div class="project-image">
+                            <img src="{{ url_for('static', filename='images/sortapp.png') }}" alt="Project 1 Image">
+                        </div>
+                        <div class="project-description">
+                            <h3>SortApp + CheckinApp</h3>
+                        </div>
+                    </div>
+                    <div class="project-back">
+                        <p>
+                            - Designed a modular system that processes guest data from CSV files, generates personalized access cards with QR codes, and distributes them via email using <strong>@useplunk</strong>.
+                            <br><br>
+                            - Developed a frontend service to interact with guest data and check guests into a high-profile event.
+                        </p>
+                    </div>
                 </div>
             </div>
+        
             <div class="project-item">
-                <div class="project-image">
-                    <img src="{{ url_for('static', filename='images/landest.png') }}" alt="Project 2 Image">
-                </div>
-                <div class="project-description">
-                    <h3>Landest</h3>
-                    </p>
+                <div class="project-content">
+                    <div class="project-front">
+                        <div class="project-image">
+                            <img src="{{ url_for('static', filename='images/landest.png') }}" alt="Project 2 Image">
+                        </div>
+                        <div class="project-description">
+                            <h3>Landest</h3>
+                        </div>
+                    </div>
+                    <div class="project-back">
+                        <p> 
+                            Provisioned and deployed microservices for <strong>landest.co</strong> on AWS:
+                            <br>
+                                <strong>landest-api</strong> - An entry point to the Landest property service.
+                                <br>
+                                <strong>landest-api-gateway</strong> - A layer that routes requests to multiple APIs or services.
+                                <br>
+                                <strong>Zenith proxy</strong> - A proxy application that communicates with Zenith Banks APIs.
+                                Provisioned and configured a Docker-based email server using <strong>@mailcow</strong>.
+                                <br>
+                                Implemented OTel in Ops to collect traces, metrics, and logs from several services and send them off to an observability backend
+                            </p>
+                            
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>       
     </div>
-
-    <!-- First div -->
     <div class="content-second">
         <p>Planting more project seeds<span class="emoji-superscript">  🌱</span></p>
         <!-- Animated Dots -->
@@ -69,9 +98,11 @@
         </section>
     </div>
 
+</section>
+
     <!-- Second div -->
     <div class="content-second">
-        <p>In the "Let's Connect" section: <br><br> - You can find links to my X (formerly Twitter) handle, GitHub, and LinkedIn pages. <br> - Visit my Drive link to discover all of the interesting things about me. <br> - For DevOps, I am currently studying for the following certifications: Azure (AZ-900, AZ-200, AZ-400) and AWS (Certified Cloud Practitioner and Certified Solutions Architect). <br> - I am also growing OSCA Calabar, a chapter community of OSCAfrica. My goal is to reach 1,500 community members by Dec 2025 and develop an AI product built and maintained <br> by the community members. <br> - In my free time, you can catch me listening to music. All my favorite tracks can be found here. </p>
+        <p>In the "Let's Connect" section: <br><br> - You can find links to my X (formerly Twitter) handle, GitHub, and LinkedIn pages. <br> - Visit my Drive link to discover all of the interesting things about me. <br>- <strong>My 2025 in summary:</strong> For DevOps, I am currently studying for the following certifications in the first quarter of the year: Azure (AZ-900, AZ-200, AZ-400) and AWS (Certified Cloud Practitioner and Certified Solutions Architect). I am also pursuing digital, content, and email marketing certifications to strengthen my skills in program and community management. Additionally, I am working on an introduction to cybersecurity and the Junior Cybersecurity Analyst certification from <strong>Cisco.</strong><br> - I am also growing OSCA Calabar, a chapter community of <strong>OSCAfrica.</strong> My goal is to reach 1,500 community members by Dec 2025 and develop an AI product built and maintained by the community members. <br> - In my free time, you can catch me listening to music. All my favorite tracks can be found here. </p>
     </div>
 </section>
  
@@ -88,15 +119,15 @@
         <a href="https://www.linkedin.com/in/fusedtechie/" target="_blank">
             <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn">
         </a>
-        <a href="#" target="_blank">
-            <img src="{{ url_for('static', filename='images/deezer.png') }}" alt="Deezer">
-        </a>
-        <a href="https://slides.com/fusedtechie" target="_blank">
-            <img src="{{ url_for('static', filename='images/microphone.png') }}" alt="Microphone">
-        </a>
         <a href="https://drive.google.com/drive/folders/1KeNSCfxOuqbqcxfEOyFcuZXXDJRllZKE?usp=sharing" target="_blank">
             <img src="{{ url_for('static', filename='images/google-drive.png') }}" alt="Google Drive">
         </a>
+        <a href="https://music.youtube.com/playlist?list=PLyUdosmnLe8IgDXSfQoWqqlRXUahKbb_2&si=tPx9RWwvF5TWRjq7" target="_blank">
+            <img src="{{ url_for('static', filename='images/ytmusic.png') }}" alt="YouTube Music">
+        </a>
+        <!-- <a href="https://slides.com/fusedtechie" target="_blank">
+            <img src="{{ url_for('static', filename='images/microphone.png') }}" alt="Microphone">
+        </a> -->
         <a href="https://fusedtechie.hashnode.dev/" target="_blank">
             <img src="{{ url_for('static', filename='images/hashnode.png') }}" alt="Hashnode">
         </a>
