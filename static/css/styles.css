@@ -140,7 +140,8 @@ header {
     text-align: justify;
     max-width: 800px;
     color: #fff;
-    padding: 0 10px; /* Add padding to prevent text from touching the edges */
+    padding: 0 10px;
+    font-family: 'Andika', sans-serif;
 }
 
 /* Style for the superscript emoji */
@@ -305,6 +306,10 @@ header {
     text-align: left;
     color: #fff;
     padding:0 300px;
+}
+
+.content-second p a {
+    color: #fff;
 }
 
 /* Let's Connect Section */
