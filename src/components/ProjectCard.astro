@@ -1,0 +1,17 @@
+---
+const { number, title, description, role, year, tags, href = '#' } = Astro.props;
+---
+<article class="project-card">
+  <a class="project-link" href={href} aria-label={`View ${title} case study`}>
+    <span class="project-number">{number}</span>
+    <div class="project-copy">
+      <div class="project-title-row"><h3>{title}</h3><span class="project-arrow" aria-hidden="true">↗</span></div>
+      <p>{description}</p>
+      <div class="tag-row">{tags.map((tag: string) => <span>{tag}</span>)}</div>
+    </div>
+    <dl class="project-meta">
+      <div><dt>Role</dt><dd>{role}</dd></div>
+      <div><dt>Year</dt><dd>{year}</dd></div>
+    </dl>
+  </a>
+</article>

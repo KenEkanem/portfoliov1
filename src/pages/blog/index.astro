@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+const posts = (await getCollection('blog')).sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
+const categories = [...new Set(posts.map(post => post.data.category))];
+---
+<BaseLayout title="Writing — Kennedy Ekanem" description="Notes on DevOps, open source, community, and building useful things.">
+  <section class="archive section">
+    <span class="eyebrow">The notebook</span>
+    <h1>From the work.</h1>
+    <p class="archive-intro">Practical lessons on infrastructure, python software, community, and becoming a more thoughtful builder.</p>
+    <div class="filters" aria-label="Article categories"><button class="active" data-filter="all">All notes</button>{categories.map(category => <button data-filter={category}>{category}</button>)}</div>
+    <div class="post-grid archive-grid">{posts.map(post => <div data-category={post.data.category}><PostCard post={post} /></div>)}</div>
+  </section>
+  <script>
+    const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+    const cards = document.querySelectorAll<HTMLElement>('[data-category]');
+    buttons.forEach(button => button.addEventListener('click', () => {
+      buttons.forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
+      cards.forEach(card => card.hidden = button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter);
+    }));
+  </script>
+</BaseLayout>

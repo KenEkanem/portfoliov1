@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+const { title = 'Kennedy Ekanem — DevOps, Programs & Community', description = 'The portfolio and field notes of Kennedy Ekanem.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <title>{title}</title>
+    <script is:inline>
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') document.documentElement.dataset.theme = 'dark';
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Kennedy Ekanem home">
+        <span class="brand-mark">KE</span><span>Kennedy Ekanem</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/#work">My Work</a>
+        <a href="/blog">Writing</a>
+        <a href="/#about">About</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme">☼</button>
+        <a class="button button-small" href="mailto:hello@fusedtechie.me">Let's talk ↗</a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <p>Building dependable systems and communities that help people do their best work.</p>
+      <div class="footer-links">
+        <a href="/blog">Writing</a><a href="https://github.com/KenEkanem" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/in/fusedtechie/" target="_blank">LinkedIn ↗</a><a href="mailto:hello@fusedtechie.me">Email</a>
+      </div>
+      <small>© {new Date().getFullYear()} Openletter. All Rights Reserved. This copyright applies strictly to my work/projects and its contents, excluding the surrounding website framework.</small>
+    </footer>
+    <script>
+      document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        document.documentElement.dataset.theme = dark ? '' : 'dark';
+        localStorage.setItem('theme', dark ? 'light' : 'dark');
+      });
+    </script>
+  </body>
+</html>
