@@ -16,6 +16,7 @@ const { title = 'Kennedy Ekanem — DevOps, Programs & Community', description =
     </script>
   </head>
   <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="/" aria-label="Kennedy Ekanem home">
         <span class="brand-mark">KE</span><span>Kennedy Ekanem</span>
@@ -37,6 +38,13 @@ const { title = 'Kennedy Ekanem — DevOps, Programs & Community', description =
       <small>© {new Date().getFullYear()} Openletter. All Rights Reserved. This copyright applies strictly to my work/projects and its contents, excluding the surrounding website framework.</small>
     </footer>
     <script>
+      const cursorGlow = document.querySelector<HTMLElement>('.cursor-glow');
+      window.addEventListener('pointermove', (event) => {
+        if (!cursorGlow) return;
+        cursorGlow.style.setProperty('--cursor-x', `${event.clientX}px`);
+        cursorGlow.style.setProperty('--cursor-y', `${event.clientY}px`);
+      }, { passive: true });
+
       document.querySelector('.theme-toggle')?.addEventListener('click', () => {
         const dark = document.documentElement.dataset.theme === 'dark';
         document.documentElement.dataset.theme = dark ? '' : 'dark';
