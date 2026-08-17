@@ -1,5 +1,5 @@
 ---
-const { number, title, description, role, year, tags, href = '#' } = Astro.props;
+const { number, title, description, role, builtFor, year, tags, href = '#' } = Astro.props;
 ---
 <article class="project-card">
   <a class="project-link" href={href} aria-label={`View ${title} case study`}>
@@ -11,6 +11,7 @@ const { number, title, description, role, year, tags, href = '#' } = Astro.props
     </div>
     <dl class="project-meta">
       <div><dt>Role</dt><dd>{role}</dd></div>
+      <div><dt>Built for</dt><dd>{builtFor}</dd></div>
       <div><dt>Year</dt><dd>{year}</dd></div>
     </dl>
   </a>
