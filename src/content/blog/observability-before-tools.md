@@ -1,7 +1,7 @@
 ---
 title: "Observability before tools"
 description: "Three questions to answer before adding another dashboard to your stack."
-published: 2026-04-11
+published: 2025-04-11
 category: "Field Notes"
 readTime: "3 min read"
 featured: false

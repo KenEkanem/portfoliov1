@@ -1,7 +1,7 @@
 ---
 title: "What exactly is an MCP?"
 description: "A plain-language explainer for the protocol that lets AI assistants actually do things, not just talk."
-published: 2026-08-16
+published: 2026-03-16
 category: "AI"
 readTime: "3 min read"
 featured: false

@@ -1,7 +1,7 @@
 ---
 title: "Community is infrastructure, too"
 description: "The systems behind a healthy technical community look surprisingly familiar."
-published: 2026-06-02
+published: 2025-06-02
 category: "Community"
 readTime: "4 min read"
 featured: true

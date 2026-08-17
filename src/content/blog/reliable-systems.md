@@ -1,7 +1,7 @@
 ---
 title: "Reliability is a product feature"
 description: "Why the best infrastructure work begins with the experience of the person on the other side."
-published: 2026-07-18
+published: 2026-01-18
 category: "DevOps"
 readTime: "5 min read"
 featured: true
