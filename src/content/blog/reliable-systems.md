@@ -28,4 +28,4 @@ The most useful dashboard is the one a tired engineer can read at 2 AM without r
 
 Users may never know which cloud you chose or how elegant your pipeline is. They will know whether the product respects their time. Quiet, dependable systems create the confidence that lets every other part of a product matter.
 
-That is why reliability belongs in product conversations from the beginning — not as a cleanup phase after launch.
+That is why reliability belongs in product conversations from the beginning not as a cleanup phase after launch.

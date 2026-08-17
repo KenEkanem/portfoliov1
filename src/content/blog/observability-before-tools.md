@@ -8,7 +8,7 @@ featured: false
 tags: [observability, opentelemetry, operations]
 ---
 
-It is easy to start an observability project with a shopping list. It is harder — and more valuable — to start with uncertainty.
+It is easy to start an observability project with a shopping list. It is harder and more valuable to start with uncertainty.
 
 ## What must we know?
 

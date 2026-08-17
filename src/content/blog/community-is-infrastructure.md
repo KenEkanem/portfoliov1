@@ -14,7 +14,7 @@ When we talk about infrastructure, we usually mean the technical layer beneath a
 
 “Everyone is welcome” is a sentiment. A clear first issue, a friendly review, and an obvious place to ask questions form a system. New contributors need a path they can see and a first step small enough to take.
 
-At OSCA Calabar, the goal is not simply to gather people in a room. It is to help someone move from curiosity to contribution, and from contribution to ownership.
+The goal is not simply to gather people in a room. It is to help someone move from curiosity to contribution, and from contribution to ownership.
 
 ## Documentation is hospitality
 
