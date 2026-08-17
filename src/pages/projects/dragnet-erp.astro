@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Dragnet ERP — Kennedy Ekanem"
+  description="An internal digital workplace integrating company resources and Microsoft 365 services."
+>
+  <article class="project-page">
+    <a class="back-link" href="/#work">← Back to work</a>
+
+    <header class="project-header">
+      <p class="project-meta">Frontend engineering · Microsoft 365 · Internal systems</p>
+      <h1>Dragnet ERP</h1>
+      <p class="project-intro">
+        A unified digital workplace connecting employees to company information,
+        people, events, resources, analytics, and business systems.
+      </p>
+    </header>
+
+    <figure class="project-image">
+      <img src="/images/dragnet-erp.png" alt="Dragnet ERP Work Desk interface" />
+      <figcaption>The Dragnet ERP Work Desk and internal resource gateway.</figcaption>
+    </figure>
+
+    <section class="project-copy">
+      <h2>Overview</h2>
+      <p>
+        Dragnet ERP is an internal digital workplace and business application designed
+        to give employees one gateway to company information, people, events, resources,
+        analytics, and connected business systems.
+      </p>
+      <p>
+        I worked on its frontend experience and Microsoft 365 integrations using React,
+        TypeScript, Microsoft Entra ID, and Microsoft Graph.
+      </p>
+
+      <h2>From features to one platform</h2>
+      <p>
+        The project evolved from individual web-based features into a unified application
+        architecture. The work focused on authentication, reusable components, API
+        integrations, and seamless access to different internal systems.
+      </p>
+
+      <dl class="details">
+        <div><dt>Role</dt><dd>IT Support Engineer</dd></div>
+        <div><dt>Built for</dt><dd>Dragnet Solutions Limited</dd></div>
+        <div><dt>Year</dt><dd>2026</dd></div>
+        <div><dt>Technology</dt><dd>React, TypeScript, Microsoft Entra ID, and Microsoft Graph</dd></div>
+        <div><dt>Focus</dt><dd>Authentication, reusable UI, API integrations, and internal systems</dd></div>
+      </dl>
+    </section>
+
+    <nav class="project-nav" aria-label="Project navigation">
+      <a href="/#work">All projects</a>
+      <a href="/projects/sortapp">Next: SortApp →</a>
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .project-page{width:min(100% - 40px,680px);margin:0 auto;padding:64px 0 100px}.project-header{margin-top:72px;padding-bottom:28px;border-bottom:1px solid var(--line)}.project-meta{margin:0 0 4px;color:var(--muted);font-size:13px}.project-header h1{margin:0;font:clamp(34px,5vw,46px)/1.15 var(--serif);letter-spacing:-.035em}.project-intro{max-width:620px;margin:24px 0 0;color:var(--muted);font-size:17px;line-height:1.7}.project-copy{margin-top:58px;font-size:17px;line-height:1.8}.project-copy h2{margin:48px 0 10px;font:26px/1.3 var(--serif);letter-spacing:-.02em}.project-copy h2:first-child{margin-top:0}.project-copy p{margin:0 0 20px;color:var(--muted)}.details{margin:50px 0 0;border-top:1px solid var(--line)}.details div{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:13px 0;border-bottom:1px solid var(--line)}.details dt{color:var(--muted);font:10px Mono;text-transform:uppercase;letter-spacing:.1em}.details dd{margin:0;font-size:13px}.project-nav{display:flex;justify-content:space-between;margin-top:68px;padding-top:20px;border-top:1px solid var(--line);font-size:13px}.project-nav a:hover{text-decoration:underline}figure.project-image{width:100%;max-width:100%;margin:38px 0 0;padding:24px;aspect-ratio:auto;overflow:visible;background:var(--soft);border:1px solid var(--line);border-radius:10px}figure.project-image img{width:100%;height:auto;padding:0;border:0;border-radius:4px;object-fit:contain;background:transparent}figure.project-image figcaption{margin:12px 0 -12px;color:var(--muted);font-size:11px}
+  @media(max-width:600px){.project-page{padding-top:38px}.project-header{margin-top:48px}.project-header h1{font-size:32px}.project-intro{font-size:15px}.project-copy{margin-top:44px;font-size:16px}.details div{grid-template-columns:100px 1fr}figure.project-image{padding:12px}figure.project-image figcaption{margin-bottom:-4px}}
+</style>
