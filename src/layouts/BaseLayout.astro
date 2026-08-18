@@ -23,7 +23,7 @@ const { title = 'Kennedy Ekanem — DevOps, Programs & Community', description =
       </a>
       <nav aria-label="Main navigation">
         <a href="/#work">My Work</a>
-        <a href="/blog">Writing</a>
+        <a class="mobile-writing" href="/blog">Writing</a>
         <a class="mobile-about" href="/about">About</a>
         <button class="theme-toggle" type="button" aria-label="Toggle color theme">☼</button>
         <a class="button button-small" href="mailto:hello@fusedtechie.me">Let's talk ↗</a>
@@ -31,7 +31,6 @@ const { title = 'Kennedy Ekanem — DevOps, Programs & Community', description =
     </header>
     <main><slot /></main>
     <footer class="site-footer">
-      <p>Building dependable systems and communities that help people do their best work.</p>
       <div class="footer-links">
         <a href="/blog">Writing</a><a href="https://github.com/KenEkanem" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/in/fusedtechie/" target="_blank">LinkedIn ↗</a><a href="mailto:hello@fusedtechie.me">Email</a>
       </div>
