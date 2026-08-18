@@ -1,19 +1,20 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
+import { marked } from 'marked';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('blog', ({ data }) => data.type === 'post');
   return posts.map(post => ({ params: { id: post.id }, props: { post } }));
 }
 const { post } = Astro.props;
-const { Content } = await render(post);
+const content = await marked.parse(post.data.content);
 const date = post.data.published.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 ---
 <BaseLayout title={`${post.data.title} — Kennedy Ekanem`} description={post.data.description}>
   <article class="article-shell">
     <a class="back-link" href="/blog">← Back to writing</a>
     <header class="article-header"><span class="eyebrow">{post.data.category}</span><h1>{post.data.title}</h1><p>{post.data.description}</p><div class="article-meta"><span>{date}</span><span>·</span><span>{post.data.readTime}</span></div></header>
-    <div class="article-body"><Content /></div>
+    <div class="article-body" set:html={content} />
     <footer class="article-end"><div class="tag-row">{post.data.tags.map((tag: string) => <span>#{tag}</span>)}</div><a class="button button-outline" href="/blog">More field notes →</a></footer>
   </article>
 </BaseLayout>
