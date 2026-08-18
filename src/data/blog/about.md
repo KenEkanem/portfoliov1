@@ -9,7 +9,7 @@ tags: [M365, cloud, linux, python, open source]
 type: "page"
 ---
 
-Currently working across Microsoft 365, Cloud, and Linux, while expanding my skills in Python software development and exploring Cloud, ITOps, and SRE. I enjoy troubleshooting, building practical solutions, and improving IT infrastructure.
+Currently working across Microsoft 365, Cloud, and Linux, while expanding my skills in Python software, exploring Cloud technologies, ITOps, and SRE. I enjoy troubleshooting, building practical solutions, and improving IT infrastructure.
 
 I have a keen interest in Open Source and bring a combination of technical expertise and strong soft skills, allowing me to work effectively across both technical and non tech roles. I’m passionate about research, Linux, Python Software, Infrastructure, and Open Source, learning, building, troubleshooting, and sharing what I discover along the way.
 
