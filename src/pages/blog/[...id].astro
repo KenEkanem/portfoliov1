@@ -1,13 +1,26 @@
 ---
 import { getCollection } from 'astro:content';
-import { marked } from 'marked';
+import { marked, Renderer } from 'marked';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => data.type === 'post');
   return posts.map(post => ({ params: { id: post.id }, props: { post } }));
 }
 const { post } = Astro.props;
-const content = await marked.parse(post.data.content);
+const escapeHtml = (value: string) => value.replace(/[&<>"']/g, (character) => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+}[character] ?? character));
+const renderer = new Renderer();
+renderer.link = function ({ href, title, tokens }) {
+  const label = this.parser.parseInline(tokens);
+  const titleAttribute = title ? ` title="${escapeHtml(title)}"` : '';
+  return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer"${titleAttribute}>${label}</a>`;
+};
+renderer.image = ({ href, text }) => {
+  const caption = text ? `<figcaption>${escapeHtml(text)}</figcaption>` : '';
+  return `<figure class="article-figure"><div class="article-image-frame"><img src="${escapeHtml(href)}" alt="${escapeHtml(text)}" loading="lazy" />${caption}</div></figure>`;
+};
+const content = await marked.parse(post.data.content, { renderer });
 const date = post.data.published.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 ---
 <BaseLayout title={`${post.data.title} — Kennedy Ekanem`} description={post.data.description}>
@@ -18,3 +31,45 @@ const date = post.data.published.toLocaleDateString('en-US', { month: 'long', da
     <footer class="article-end"><div class="tag-row">{post.data.tags.map((tag: string) => <span>#{tag}</span>)}</div><a class="button button-outline" href="/blog">More field notes →</a></footer>
   </article>
 </BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.article-body pre').forEach((block) => {
+    const code = block.querySelector('code');
+    if (!code || block.querySelector('.copy-code')) return;
+
+    const button = document.createElement('button');
+    button.className = 'copy-code';
+    button.type = 'button';
+    button.setAttribute('aria-label', 'Copy code to clipboard');
+    button.title = 'Copy code';
+    button.textContent = '⧉';
+
+    button.addEventListener('click', async () => {
+      try {
+        const text = code.textContent ?? '';
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const input = document.createElement('textarea');
+          input.value = text;
+          input.style.position = 'fixed';
+          input.style.opacity = '0';
+          document.body.append(input);
+          input.select();
+          document.execCommand('copy');
+          input.remove();
+        }
+        button.textContent = '✓';
+        button.setAttribute('aria-label', 'Code copied');
+        setTimeout(() => {
+          button.textContent = '⧉';
+          button.setAttribute('aria-label', 'Copy code to clipboard');
+        }, 1600);
+      } catch {
+        button.textContent = '!';
+      }
+    });
+
+    block.append(button);
+  });
+</script>
