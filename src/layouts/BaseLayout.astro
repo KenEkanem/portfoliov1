@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
-const { title = 'Kennedy Ekanem — DevOps, Programs & Community', description = 'The portfolio and field notes of Kennedy Ekanem.' } = Astro.props;
+const { title = 'Kennedy Ekanem: ITOps · SRE · Open Source', description = 'The portfolio and field notes of Kennedy Ekanem' } = Astro.props;
+const previewImage = new URL('/images/kennedy-ekanem-preview.png', Astro.site);
 ---
 <!doctype html>
 <html lang="en">
@@ -8,6 +9,18 @@ const { title = 'Kennedy Ekanem — DevOps, Programs & Community', description =
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={previewImage} />
+    <meta property="og:image:width" content="1256" />
+    <meta property="og:image:height" content="1256" />
+    <meta property="og:image:alt" content="Illustrated portrait of Kennedy Ekanem" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={previewImage} />
+    <meta name="twitter:image:alt" content="Illustrated portrait of Kennedy Ekanem" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <title>{title}</title>
     <script is:inline>
